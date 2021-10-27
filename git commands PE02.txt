@@ -1,0 +1,143 @@
+Microsoft Windows [Version 10.0.19042.1288]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\tanck>git --version
+git version 2.33.0.windows.2
+
+C:\Users\tanck>cd desktop
+
+C:\Users\tanck\Desktop>cd fullSD
+
+C:\Users\tanck\Desktop\FullSD>cd Week2
+
+C:\Users\tanck\Desktop\FullSD\Week2>dir
+ Volume in drive C is OS
+ Volume Serial Number is 049F-602F
+
+ Directory of C:\Users\tanck\Desktop\FullSD\Week2
+
+25/10/2021  03:42 pm    <DIR>          .
+25/10/2021  03:42 pm    <DIR>          ..
+25/10/2021  02:11 pm    <DIR>          Exercise7
+25/10/2021  02:23 pm    <DIR>          js-events
+25/10/2021  03:42 pm    <DIR>          portfolio-html
+25/10/2021  02:58 pm         3,081,539 Week2-Lab-workbook.pdf
+               1 File(s)      3,081,539 bytes
+               5 Dir(s)  224,150,831,104 bytes free
+
+C:\Users\tanck\Desktop\FullSD\Week2>git clone https://github.com/tanck09/TestGitPE02.git
+Cloning into 'TestGitPE02'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+C:\Users\tanck\Desktop\FullSD\Week2>dir
+ Volume in drive C is OS
+ Volume Serial Number is 049F-602F
+
+ Directory of C:\Users\tanck\Desktop\FullSD\Week2
+
+25/10/2021  04:29 pm    <DIR>          .
+25/10/2021  04:29 pm    <DIR>          ..
+25/10/2021  02:11 pm    <DIR>          Exercise7
+25/10/2021  02:23 pm    <DIR>          js-events
+25/10/2021  03:42 pm    <DIR>          portfolio-html
+25/10/2021  04:29 pm    <DIR>          TestGitPE02
+25/10/2021  02:58 pm         3,081,539 Week2-Lab-workbook.pdf
+               1 File(s)      3,081,539 bytes
+               6 Dir(s)  224,151,539,712 bytes free
+
+C:\Users\tanck\Desktop\FullSD\Week2>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\tanck\Desktop\FullSD\Week2>cd TestGitPE02
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        main.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git add .
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+        new file:   main.js
+
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git commit -m "CK adds index and js file"
+[main 5c210ba] CK adds index and js file
+ 2 files changed, 6 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 main.js
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 383 bytes | 383.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/tanck09/TestGitPE02.git
+   b854f12..5c210ba  main -> main
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git add .
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git commit -m "Modify index.html"
+[main 1c7cf0e] Modify index.html
+ 1 file changed, 1 insertion(+)
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 371 bytes | 371.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/tanck09/TestGitPE02.git
+   5c210ba..1c7cf0e  main -> main
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 758 bytes | 84.00 KiB/s, done.
+From https://github.com/tanck09/TestGitPE02
+   1c7cf0e..86ba1cb  main       -> origin/main
+Updating 1c7cf0e..86ba1cb
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\tanck\Desktop\FullSD\Week2\TestGitPE02>
